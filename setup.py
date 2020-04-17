@@ -1,13 +1,18 @@
 from setuptools import setup
 import setuptools
 
+
+with open("README.md", 'r', encoding='utf8') as f:
+    long_description = f.read()
+
 setup(
     name = 'cptools',  # 包名称
-    version = '1.0.0',  # 版本号，我个人喜欢从1开始
+    version = '1.1.1',  # 版本号，我个人喜欢从1开始
     author = 'GentleCP',
     author_email = '574881148@qq.com',
     description = 'Tools used by CP',
-    long_description = 'This is long description',
+    long_description = long_description,
+    long_description_content_type="text/markdown",
     install_requires = [
         'requests >= 2.23',
         'tqdm >= 4.45',
