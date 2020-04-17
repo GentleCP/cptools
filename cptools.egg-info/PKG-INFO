@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: cptools
+Version: 1.0.0
+Summary: Tools used by CP
+Home-page: https://github.com/GentleCP/cptools
+Author: GentleCP
+Author-email: 574881148@qq.com
+License: UNKNOWN
+Description: This is long description
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
