@@ -8,6 +8,10 @@ setup(
     author_email = '574881148@qq.com',
     description = 'Tools used by CP',
     long_description = 'This is long description',
+    install_requires = [
+        'requests >= 2.23',
+        'tqdm >= 4.45',
+    ],
     url = 'https://github.com/GentleCP/cptools',   # 包的主页，如果你发布在了github就填写github链接
     packages = setuptools.find_packages(),  # 让setuptools自动发现包
     platforms = 'any',  # 包使用的平台
