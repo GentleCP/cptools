@@ -1,4 +1,5 @@
 from .hello_cp import *
 from .progress import *
 
-name = "cptools"
+__name__ = "cptools"
+__version__ = '1.1.1'
