@@ -7,7 +7,7 @@ with open("README.md", 'r', encoding='utf8') as f:
 
 setup(
     name = 'cptools',  # 包名称
-    version = '1.1.1',  # 版本号，我个人喜欢从1开始
+    version = '1.2.0',
     author = 'GentleCP',
     author_email = '574881148@qq.com',
     description = 'Tools used by CP',
@@ -16,6 +16,8 @@ setup(
     install_requires = [
         'requests >= 2.23',
         'tqdm >= 4.45',
+        'DingtalkChatbot >= 1.5.2',
+        'yagmail >=0.11.224',
     ],
     url = 'https://github.com/GentleCP/cptools',   # 包的主页，如果你发布在了github就填写github链接
     packages = setuptools.find_packages(),  # 让setuptools自动发现包
