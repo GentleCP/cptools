@@ -1,5 +1,5 @@
 ![python version](https://img.shields.io/badge/python-3.5+-blue)
-
+![demo version](https://img.shields.io/github/v/tag/GentleCP/cptools?color=orange)
 ![license](https://img.shields.io/github/license/GentleCP/cptools)
 # cptools
 我个人写代码过程觉得有用的小工具函数合集，目前包含：
