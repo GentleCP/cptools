@@ -2,6 +2,7 @@ README.md
 setup.py
 cptools/__init__.py
 cptools/hello_cp.py
+cptools/notify.py
 cptools/progress.py
 cptools.egg-info/PKG-INFO
 cptools.egg-info/SOURCES.txt

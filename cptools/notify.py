@@ -164,7 +164,7 @@ class EmailSender(Notifier):
         :return: send result
         '''
         try:
-            to = to if not to else [self._user]  # 如果没有填入收件人，默认发送给自己
+            to = to if to else [self._user]  # 如果没有填入收件人，默认发送给自己
             self.__yag.send(to=to, subject=text, contents=contents)
         except smtplib.SMTPAuthenticationError:
             print("send mail error, please check your password or auth code.")
@@ -195,7 +195,7 @@ from configparser import ConfigParser
 if __name__ == "__main__":
     cfg = ConfigParser()
     cfg.read('config.ini',encoding='utf-8')
-    # test_email(cfg)
-    # test_ServerChan(cfg)
-    # test_DingDing(cfg)
+    test_email(cfg)
+    test_ServerChan(cfg)
+    test_DingDing(cfg)
     mac_notify(title='Warning', text='This is a test')
