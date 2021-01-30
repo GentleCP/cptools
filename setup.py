@@ -7,7 +7,7 @@ with open("README.md", 'r', encoding='utf8') as f:
 
 setup(
     name = 'cptools',  # 包名称
-    version = '1.2.1',
+    version = '1.3.1',
     author = 'GentleCP',
     author_email = '574881148@qq.com',
     description = 'Tools used by CP',

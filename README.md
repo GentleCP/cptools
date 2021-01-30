@@ -5,6 +5,7 @@
 我个人写代码过程觉得有用的小工具函数合集，目前包含：
 - progress:下载进度条
 - notify:各种通知工具，如`ServerChan`,`DingDing`,`Email`
+- logger:日志打印与存储器
 
 ## Usage
 ```text
@@ -58,3 +59,30 @@ result is something like this:
 
 ![image-20210120115105651](https://gitee.com/gentlecp/ImgUrl/raw/master/20210120115105.png)
 
+
+### logger
+- default LogHandler
+```python
+from cptools.logger import LogHandler
+
+log = LogHandler('test')
+log.info('this is a test msg')  # 2021-01-30 14:35:48,639 logger.py-[line:130] 【INFO】 this is a test msg
+```
+
+- LogHandler with different configuration
+    - `name`: The name of LogHandler
+    - `level`: Log level, default `INFO`
+    - `steam`: If True, show log in terminal, default True
+    - `file`: If True, save log to local file, defalut True
+    - `log_path`: Where to save log, default `../log/`
+    
+```python
+from cptools.logger import LogHandler
+
+CRITICAL = 50
+log = LogHandler(name='test',
+                 level=CRITICAL,  # note that the level is a integer number
+                 log_path='log/')
+log.info("The level is critical, info message will not display!")
+log.critical("Critical message will show!")
+```
