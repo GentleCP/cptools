@@ -1,25 +1,45 @@
 ![python version](https://img.shields.io/badge/python-3.5+-blue)
-![demo version](https://img.shields.io/github/v/tag/GentleCP/cptools?color=orange)
+![pypi version](https://img.shields.io/pypi/v/cptools?color=orange&style=plastic)
 ![license](https://img.shields.io/github/license/GentleCP/cptools)
 # cptools
-我个人写代码过程觉得有用的小工具函数合集，目前包含：
-- progress:下载进度条
-- notify:各种通知工具，如`ServerChan`,`DingDing`,`Email`
-- logger:日志打印与存储器
+`cptools`is a tool repository which is used to save the useful python code when  I learned python. 
+Please feel free to use them. If you like it, could you please give me a star for this repository, thanks a lot.
 
-## Usage
+Now, it includes:
+- progress: to show progress bar when waiting for the running program
+- notify: notify yourself when your program has done something right or wrong
+- logger: make log print easier
+- function: record useful code which is frequently used
+
+> try to type the following code and see what will happen.
+```python
+from cptools import hello
+
+hello()
+```
+
+# Usage
 ```text
 pip install -U cptools
 ```
-### progress
-- download_file(url, session, file_path, overwrite)   
-    文件下载进度条，requests库的get方法默认是没有进度条的，使用该函数能够弥补这一点，效果如下图
-    ![](img/download-file.png)
+## progress
+- download_file(url, session, file_path, overwrite):download file with a progress bar.
+![](https://gitee.com/gentlecp/ImgUrl/raw/master/20210324085156.png)
+```python
+from cptools.progress import download_file
+# from cptools import download_file  # both will work
 
-### notify
-- ServerChan
+download_url = "https://dl.360safe.com/360/inst.exe"
+if download_file(download_url,file_path='360.exe', overwrite=True):
+    print('download success')
+```
+
+## notify
+- ServerChan: notify yourself on your wechat with [ServerChan](http://sc.ftqq.com/?c=code)
 ```python
 from cptools.notify import ServerChan
+# from cptools import ServerChan  # both will work
+
 SJ = ServerChan()
 SJ.token='your ServerChan token'  # your ServerChan token
 SJ.send_text(text='This is a test.')
@@ -28,9 +48,11 @@ SJ.send_text(text='This is a test.')
 SJ = ServerChan(token='your ServerChan token')  
 SJ.send_text(text='This is a test.')
 ```
-- DingDing
+- DingDing: notify everyone in your dingTalk group by [dingTalk_bot](https://developers.dingtalk.com/document/app/before-you-start)
 ```python
 from cptools.notify import DingDing
+# from cptools import DingDing  both will work
+
 dd = DingDing()
 dd.token='your DingDing assess_token'  
 dd.send_text(text='[key word]This is a test.')  # your test should include the key word that you specify 
@@ -39,7 +61,11 @@ dd.send_text(text='[key word]This is a test.')  # your test should include the k
 dd = DingDing(token='your DingDing assess_token' )
 dd.send_text(text='[key word]This is a test.')  # your test should include the key word that you specify 
 ```
-- Email
+- Email: notify people by sending an email
+- [x] 163 email
+- [x] qq email
+- [ ] others, haven't tested
+
 ```python
 from cptools.notify import EmailSender
 email = EmailSender(user='xx@qq.com',  
@@ -48,10 +74,12 @@ email = EmailSender(user='xx@qq.com',
 email.send_text(text='test', contents='this is a test mail', to=['xx@qq.com',])
 ```
 
-- mac_notify  
+- mac_notify: show a message on your mac, it could be really nice when you have a mac.
 
-```
+```python
 from cptools.notify import mac_notify
+# from cptools import mac_notify  # both will work
+
 mac_notify(title='Warning', text='This is a test')
 ```
 
@@ -60,12 +88,14 @@ result is something like this:
 ![image-20210120115105651](https://gitee.com/gentlecp/ImgUrl/raw/master/20210120115105.png)
 
 
-### logger
-- default LogHandler
+## logger
+> logger is used to print log in your program, it can reduce the amount of time you spend on configuring logging 
+- LogHandler: you shall start with a simple LogHandler
+
 ```python
 from cptools.logger import LogHandler
 
-log = LogHandler('test')
+log = LogHandler("the name of LogHandler")  # by default, the name will be the __name__
 log.info('this is a test msg')  # 2021-01-30 14:35:48,639 logger.py-[line:130] 【INFO】 this is a test msg
 ```
 
@@ -85,4 +115,29 @@ log = LogHandler(name='test',
                  log_path='log/')
 log.info("The level is critical, info message will not display!")
 log.critical("Critical message will show!")
+```
+
+## function
+- `is_unique(seq)`: judge whether a giving sequence has repeating elements or not
+```python
+from cptools import is_unique
+
+a = [1,2,3]
+b = [4,4,5]
+print(is_unique(a))  # True
+print(is_unique(b))  # False
+```
+- `get_chunk_list(lst, size)`: split a list into num chunks by specifying the chunk size
+```python
+from cptools import chunk_list
+
+a = [1,2,3,4,5]
+print(chunk_list(a, 2))  # [[1,2], [3,4], 5]
+```
+- `flatten_seq(seq)`: flatten a deep sequence into a single one
+```python
+from cptools import flatten_seq
+
+a = [[1,2],[[3,4]],5]
+print(list(flatten_seq(a)))  # [1,2,3,4,5]
 ```

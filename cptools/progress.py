@@ -2,11 +2,10 @@
 显示所有的进度信息，包括网页内容下载，运行训练过程等
 '''
 import requests
-import logging
 import os
 from tqdm import tqdm
 
-def download_file(url, session=None, file_path='未命名文件', overwrite = False):
+def download_file(url, session=None, file_path='new_file', overwrite = False):
     '''
     根据指定url下载文件
     :param url:
@@ -35,7 +34,6 @@ def download_file(url, session=None, file_path='未命名文件', overwrite = Fa
                         progress_bar.update(chunk_size)
             progress_bar.close()
     else:
-        logging.error('download fail.')
         return False
 
 # if __name__ == '__main__':

@@ -1,4 +1,5 @@
 from setuptools import setup
+from cptools import __version__
 import setuptools
 
 
@@ -7,7 +8,7 @@ with open("README.md", 'r', encoding='utf8') as f:
 
 setup(
     name = 'cptools',  # 包名称
-    version = '1.3.1',
+    version = __version__,
     author = 'GentleCP',
     author_email = '574881148@qq.com',
     description = 'Tools used by CP',

@@ -126,10 +126,10 @@ class LogHandler(logging.Logger):
 
 
 if __name__ == '__main__':
-    # log = LogHandler('test')
-    # log.info('this is a test msg')
-    log = LogHandler(name='test',
-                     level=CRITICAL,
-                     log_path='log/')
-    log.info("The level is critical, info message will not display!")
-    log.critical("Critical message will show!")
+    log = LogHandler()
+    log.info('this is a test msg')
+    # log = LogHandler(name='test',
+    #                  level=CRITICAL,
+    #                  log_path='log/')
+    # log.info("The level is critical, info message will not display!")
+    # log.critical("Critical message will show!")

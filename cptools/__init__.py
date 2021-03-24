@@ -1,6 +1,8 @@
-from .hello_cp import *
+from .hello import *
 from .progress import *
 from .notify import *
+from .logger import *
+from .function import *
 
 __name__ = "cptools"
-__version__ = '1.2.0'
+__version__ = '1.4.0'

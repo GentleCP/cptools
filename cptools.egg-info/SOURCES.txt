@@ -1,7 +1,9 @@
 README.md
 setup.py
 cptools/__init__.py
-cptools/hello_cp.py
+cptools/function.py
+cptools/hello.py
+cptools/logger.py
 cptools/notify.py
 cptools/progress.py
 cptools.egg-info/PKG-INFO
