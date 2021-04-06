@@ -3,7 +3,7 @@
 ![license](https://img.shields.io/github/license/GentleCP/cptools)
 # cptools
 `cptools`is a tool repository which is used to save the useful python code when  I learned python. 
-Please feel free to use them. If you like it, could you please give me a star for this repository, thanks a lot.
+Please feel free to use them. If it is useful for you, give a star for this repository and let more people to know about it, thanks a lot.
 
 Now, it includes:
 - progress: to show progress bar when waiting for the running program
@@ -36,18 +36,32 @@ if download_file(download_url,file_path='360.exe', overwrite=True):
 
 ## notify
 - ServerChan: notify yourself on your wechat with [ServerChan](http://sc.ftqq.com/?c=code)
-```python
-from cptools.notify import ServerChan
-# from cptools import ServerChan  # both will work
-
-SJ = ServerChan()
-SJ.token='your ServerChan token'  # your ServerChan token
-SJ.send_text(text='This is a test.')
-
-# or you can do this
-SJ = ServerChan(token='your ServerChan token')  
-SJ.send_text(text='This is a test.')
-```
+  - old version: will offline soon, know more things by click [here](http://sc.ftqq.com/?c=code)
+  ```python
+  from cptools.notify import ServerChan
+  # from cptools import ServerChan  # both will work
+  
+  SJ = ServerChan()
+  SJ.token='your ServerChan token'  # your ServerChan token
+  SJ.send_text(text='This is a test.', desp='This is description.')
+  
+  # or you can do this
+  SJ = ServerChan(token='your ServerChan token')  
+  SJ.send_text(text='This is a test.', desp='This is description.')
+  ```
+  - new version: require enterprise wechat, know more things by click [here](https://sct.ftqq.com/), the only difference in cptools is the parameter `text` change to `title`
+  ```python
+  from cptools.notify import ServerChan
+  # from cptools import ServerChan  # both will work
+  
+  SJ = ServerChan()
+  SJ.token='your ServerChan token'  # your ServerChan token
+  SJ.send_text(title='This is a test.', desp='This is description.')
+  
+  # or you can do this
+  SJ = ServerChan(token='your ServerChan token')  
+  SJ.send_text(text='This is a test.', desp='This is description.')
+  ```
 - DingDing: notify everyone in your dingTalk group by [dingTalk_bot](https://developers.dingtalk.com/document/app/before-you-start)
 ```python
 from cptools.notify import DingDing
@@ -102,8 +116,8 @@ log.info('this is a test msg')  # 2021-01-30 14:35:48,639 logger.py-[line:130] ã
 - LogHandler with different configuration
     - `name`: The name of LogHandler
     - `level`: Log level, default `INFO`
-    - `steam`: If True, show log in terminal, default True
-    - `file`: If True, save log to local file, defalut True
+    - `steam`: If True, show log in terminal, default `True`
+    - `file`: If True, save log to local file, defalut `False`
     - `log_path`: Where to save log, default `../log/`
     
 ```python
@@ -127,12 +141,12 @@ b = [4,4,5]
 print(is_unique(a))  # True
 print(is_unique(b))  # False
 ```
-- `get_chunk_list(lst, size)`: split a list into num chunks by specifying the chunk size
+- `chunk_list(lst, size)`: split a list into num chunks by specifying the chunk size
 ```python
 from cptools import chunk_list
 
 a = [1,2,3,4,5]
-print(chunk_list(a, 2))  # [[1,2], [3,4], 5]
+print(list(chunk_list(a, 2)))  # [[1,2], [3,4], 5]
 ```
 - `flatten_seq(seq)`: flatten a deep sequence into a single one
 ```python

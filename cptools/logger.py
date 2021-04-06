@@ -45,11 +45,11 @@ class LogHandler(logging.Logger):
     LogHandler
     """
 
-    def __init__(self, name=__name__, level=INFO, stream=True, file=True, log_path=LOG_PATH):
+    def __init__(self, name=__name__, level=INFO, stream=True, file=False, log_path=LOG_PATH):
         self._name = name
         self._level = level
         self._log_path = log_path
-        if not os.path.exists(self._log_path):
+        if not os.path.exists(self._log_path) and file:
             try:
                 os.makedirs(self._log_path)
             except FileExistsError:

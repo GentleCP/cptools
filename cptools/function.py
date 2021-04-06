@@ -26,13 +26,15 @@ def is_unique(seq):
 def chunk_list(lst: list, size: int):
     '''
     split a list into num chunks by specifying the chunk size
+    e.g. [1,2,3,4,5] -> [[1,2], [3,4], [5]]
     Args:
-        lst:
+        lst: [1,2,3,4,5]
+        size: 3
 
     Returns: chunk_list, e.g. [[1,2], [3,4], [5]]
 
     '''
-    return list(map(lambda x: lst[x * size: x * size + size], list(range(0, ceil(len(lst) / size)))))
+    return map(lambda x: lst[x * size: x * size + size], list(range(0, ceil(len(lst) / size))))
 
 
 def flatten_seq(seq):
