@@ -99,7 +99,7 @@ mac_notify(title='Warning', text='This is a test')
 
 result is something like this:
 
-![image-20210120115105651](https://gitee.com/gentlecp/ImgUrl/raw/master/20210120115105.png)
+![](https://gitee.com/gentlecp/ImgUrl/raw/master/20210120115105.png)
 
 
 ## logger

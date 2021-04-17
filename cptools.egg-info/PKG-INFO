@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: cptools
-Version: 1.4.1
+Version: 1.4.2
 Summary: Tools used by CP
 Home-page: https://github.com/GentleCP/cptools
 Author: GentleCP
@@ -107,7 +107,7 @@ Description: ![python version](https://img.shields.io/badge/python-3.5+-blue)
         
         result is something like this:
         
-        ![image-20210120115105651](https://gitee.com/gentlecp/ImgUrl/raw/master/20210120115105.png)
+        ![](https://gitee.com/gentlecp/ImgUrl/raw/master/20210120115105.png)
         
         
         ## logger
@@ -165,6 +165,6 @@ Description: ![python version](https://img.shields.io/badge/python-3.5+-blue)
         ```
 Platform: any
 Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
 Classifier: Operating System :: OS Independent
 Description-Content-Type: text/markdown

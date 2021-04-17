@@ -54,7 +54,7 @@ class LogHandler(logging.Logger):
                 os.makedirs(self._log_path)
             except FileExistsError:
                 pass
-        logging.Logger.__init__(self, self._name, level=level)
+        logging.Logger.__init__(self, self._name, level=self._level)
         if stream:
             self.__setStreamHandler__()
         if file:
@@ -66,27 +66,6 @@ class LogHandler(logging.Logger):
     def log_path(self):
         return self._log_path
 
-
-    @property
-    def name(self):
-        return self._name
-
-
-    @name.setter
-    def name(self, name):
-        self._name = name
-
-
-    @property
-    def level(self):
-        return self._level
-
-    @level.setter
-    def level(self, level):
-        if level in [DEBUG, INFO, WARNING, CRITICAL, ERROR]:
-            self._level = level
-        else:
-            raise LogLevelSetError("Can not set the log level as:{}".format(level))
 
 
     def __setFileHandler__(self, level=None):
@@ -126,10 +105,5 @@ class LogHandler(logging.Logger):
 
 
 if __name__ == '__main__':
-    log = LogHandler()
-    log.info('this is a test msg')
-    # log = LogHandler(name='test',
-    #                  level=CRITICAL,
-    #                  log_path='log/')
-    # log.info("The level is critical, info message will not display!")
-    # log.critical("Critical message will show!")
+    log = LogHandler(level=DEBUG)
+    log.debug('this is a test msg')
