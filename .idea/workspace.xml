@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65635fe1-fba5-49a4-aef4-f70be0a0efdb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cptools.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/cptools.egg-info/PKG-INFO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cptools.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cptools.egg-info/SOURCES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cptools/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/cptools/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cptools/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/cptools/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-    </list>
+    <list default="true" id="65635fe1-fba5-49a4-aef4-f70be0a0efdb" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -276,7 +268,8 @@
       <workItem from="1618208720853" duration="17000" />
       <workItem from="1618647791376" duration="55000" />
       <workItem from="1618647950739" duration="115000" />
-      <workItem from="1618648086105" duration="1343000" />
+      <workItem from="1618648086105" duration="1636000" />
+      <workItem from="1618650814225" duration="681000" />
     </task>
     <servers />
   </component>

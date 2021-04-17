@@ -1,6 +1,12 @@
 from setuptools import setup
-from __about__ import __name__, __version__, __url__, __author__, __author_email__, __description__
 import setuptools
+
+__name__ = "cptools"
+__version__ = '1.4.3'
+__author__ = 'GentleCP'
+__author_email__ = '574881148@qq.com'
+__description__ = 'Tools used by CP'
+__url__ = 'https://github.com/GentleCP/cptools'
 
 
 with open("README.md", 'r', encoding='utf8') as f:
