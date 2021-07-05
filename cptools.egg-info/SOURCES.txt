@@ -1,5 +1,6 @@
 README.md
 setup.py
+cptools/__about__.py
 cptools/__init__.py
 cptools/function.py
 cptools/hello.py

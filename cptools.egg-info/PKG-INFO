@@ -1,10 +1,10 @@
 Metadata-Version: 2.1
 Name: cptools
-Version: 1.4.3
+Version: 1.4.4
 Summary: Tools used by CP
 Home-page: https://github.com/GentleCP/cptools
 Author: GentleCP
-Author-email: 574881148@qq.com
+Author-email: me@gentlecp.com
 License: UNKNOWN
 Description: ![python version](https://img.shields.io/badge/python-3.5+-blue)
         ![pypi version](https://img.shields.io/pypi/v/cptools?color=orange&style=plastic)
@@ -33,6 +33,7 @@ Description: ![python version](https://img.shields.io/badge/python-3.5+-blue)
         ## progress
         - download_file(url, session, file_path, overwrite):download file with a progress bar.
         ![](https://gitee.com/gentlecp/ImgUrl/raw/master/20210324085156.png)
+          
         ```python
         from cptools.progress import download_file
         # from cptools import download_file  # both will work
@@ -71,6 +72,7 @@ Description: ![python version](https://img.shields.io/badge/python-3.5+-blue)
           SJ.send_text(text='This is a test.', desp='This is description.')
           ```
         - DingDing: notify everyone in your dingTalk group by [dingTalk_bot](https://developers.dingtalk.com/document/app/before-you-start)
+        > after `v.1.4.4`, cptools will not install `DingtalkChatbot` automatically, you have to install it by running `pip install DingtalkChatbot` manually
         ```python
         from cptools.notify import DingDing
         # from cptools import DingDing  both will work
@@ -87,6 +89,7 @@ Description: ![python version](https://img.shields.io/badge/python-3.5+-blue)
         - [x] 163 email
         - [x] qq email
         - [ ] others, haven't tested
+        > after `v.1.4.4`, cptools will not install `yagmail` automatically, you have to install it by running `pip install yagmail` manually
         
         ```python
         from cptools.notify import EmailSender

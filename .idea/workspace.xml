@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65635fe1-fba5-49a4-aef4-f70be0a0efdb" name="Default Changelist" comment="" />
+    <list default="true" id="65635fe1-fba5-49a4-aef4-f70be0a0efdb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cptools.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/cptools.egg-info/PKG-INFO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cptools.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cptools.egg-info/SOURCES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cptools/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/cptools/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +106,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.new_setup">
+  <component name="RunManager" selected="Python.logger">
     <configuration name="hello" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cptools" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -219,8 +226,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.new_setup" />
         <item itemvalue="Python.logger" />
+        <item itemvalue="Python.new_setup" />
         <item itemvalue="Python.hello" />
         <item itemvalue="Python.test_function" />
         <item itemvalue="Python.test_notify" />
@@ -270,6 +277,24 @@
       <workItem from="1618647950739" duration="115000" />
       <workItem from="1618648086105" duration="1636000" />
       <workItem from="1618650814225" duration="681000" />
+      <workItem from="1618832200298" duration="1346000" />
+      <workItem from="1618833722089" duration="3000" />
+      <workItem from="1618879933037" duration="282000" />
+      <workItem from="1619053781101" duration="26000" />
+      <workItem from="1619060850723" duration="110000" />
+      <workItem from="1620979914252" duration="527000" />
+      <workItem from="1620980564259" duration="69000" />
+      <workItem from="1621133317864" duration="7000" />
+      <workItem from="1622797934518" duration="207000" />
+      <workItem from="1622861358599" duration="807000" />
+      <workItem from="1623029895777" duration="129000" />
+      <workItem from="1623132088384" duration="488000" />
+      <workItem from="1623156393540" duration="31000" />
+      <workItem from="1623409406514" duration="329000" />
+      <workItem from="1623568930451" duration="246000" />
+      <workItem from="1623723696172" duration="56000" />
+      <workItem from="1625490947117" duration="230000" />
+      <workItem from="1625491210355" duration="783000" />
     </task>
     <servers />
   </component>
@@ -320,7 +345,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cptools$test_notify.coverage" NAME="test_notify Coverage Results" MODIFIED="1617677460331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/cptools$logger.coverage" NAME="logger Coverage Results" MODIFIED="1617849608257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cptools" />
+    <SUITE FILE_PATH="coverage/cptools$logger.coverage" NAME="logger Coverage Results" MODIFIED="1625491620606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cptools" />
     <SUITE FILE_PATH="coverage/cptools$test_function.coverage" NAME="test_function Coverage Results" MODIFIED="1617678212260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/cptools$function.coverage" NAME="function Coverage Results" MODIFIED="1616551883945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cptools" />
     <SUITE FILE_PATH="coverage/cptools$new_setup.coverage" NAME="new_setup Coverage Results" MODIFIED="1618649325538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

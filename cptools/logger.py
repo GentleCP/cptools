@@ -45,8 +45,8 @@ class LogHandler(logging.Logger):
     LogHandler
     """
 
-    def __init__(self, name=__name__, level=INFO, stream=True, file=False, log_path=LOG_PATH):
-        self._name = name
+    def __init__(self, name=None, level=INFO, stream=True, file=False, log_path=LOG_PATH):
+        self.name = name if name else self.__class__.__name__
         self._level = level
         self._log_path = log_path
         if not os.path.exists(self._log_path) and file:
@@ -54,12 +54,11 @@ class LogHandler(logging.Logger):
                 os.makedirs(self._log_path)
             except FileExistsError:
                 pass
-        logging.Logger.__init__(self, self._name, level=self._level)
+        logging.Logger.__init__(self, self.name, level=self._level)
         if stream:
             self.__setStreamHandler__()
-        if file:
-            if platform.system() != "Windows":
-                self.__setFileHandler__()
+        if file and platform.system() != "Windows":
+            self.__setFileHandler__()
 
 
     @property
@@ -74,7 +73,7 @@ class LogHandler(logging.Logger):
         :param level:
         :return:
         """
-        file_name = os.path.join(self._log_path, '{name}.log'.format(name=self._name))
+        file_name = os.path.join(self._log_path, '{name}.log'.format(name=self.name))
         # 设置日志回滚, 保存在log目录, 一天保存一个文件, 保留15天
         file_handler = TimedRotatingFileHandler(filename=file_name, when='D', interval=1, backupCount=15)
         file_handler.suffix = '%Y%m%d.log'
@@ -82,7 +81,7 @@ class LogHandler(logging.Logger):
             file_handler.setLevel(self._level)
         else:
             file_handler.setLevel(level)
-        formatter = logging.Formatter('%(asctime)s %(filename)s-[line:%(lineno)d] 【%(levelname)s】 %(message)s')
+        formatter = logging.Formatter('%(asctime)s %(filename)s-line:%(lineno)d <%(name)s> 【%(levelname)s】 %(message)s')
 
         file_handler.setFormatter(formatter)
         self.file_handler = file_handler
@@ -95,7 +94,7 @@ class LogHandler(logging.Logger):
         :return:
         """
         stream_handler = logging.StreamHandler()
-        formatter = logging.Formatter('%(asctime)s %(filename)s-[line:%(lineno)d] 【%(levelname)s】 %(message)s')
+        formatter = logging.Formatter('%(asctime)s %(filename)s-line:%(lineno)d <%(name)s> 【%(levelname)s】 %(message)s')
         stream_handler.setFormatter(formatter)
         if not level:
             stream_handler.setLevel(self._level)
@@ -105,5 +104,5 @@ class LogHandler(logging.Logger):
 
 
 if __name__ == '__main__':
-    log = LogHandler(level=DEBUG)
-    log.debug('this is a test msg')
+    log = LogHandler()
+    log.info('test')
