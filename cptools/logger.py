@@ -1,21 +1,23 @@
-#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
 -----------------File Info-----------------------
             Name: logger.py
             Description:
             Author: GentleCP
-            Email: 574881148@qq.com
-            WebSite: https://www.gentlecp.com
-            Create Date: 1/30/2021 
+            Email: me@gentlecp.com
+            WebSite: https://blog.gentlecp.com
+            Create Date: 1/30/2021
 -----------------End-----------------------------
 """
 
 
 import os
 import logging
-import platform
-from pathlib import Path
+
+try:
+    from pathlib import Path
+except ImportError:
+    from pathlib2 import Path
 
 from logging.handlers import TimedRotatingFileHandler
 
@@ -48,16 +50,14 @@ class LogHandler(logging.Logger):
     def __init__(self, name=None, level=INFO, stream=True, file=False, log_path=LOG_PATH):
         self.name = name if name else self.__class__.__name__
         self._level = level
-        self._log_path = log_path
-        if not os.path.exists(self._log_path) and file:
-            try:
-                os.makedirs(self._log_path)
-            except FileExistsError:
-                pass
+        self._log_path = Path(log_path)
+        if file and not self._log_path.exists():
+            os.makedirs(str(self._log_path))
         logging.Logger.__init__(self, self.name, level=self._level)
         if stream:
             self.__setStreamHandler__()
-        if file and platform.system() != "Windows":
+        # if file and platform.system() != "Windows":
+        if file:
             self.__setFileHandler__()
 
 
@@ -73,9 +73,9 @@ class LogHandler(logging.Logger):
         :param level:
         :return:
         """
-        file_name = os.path.join(self._log_path, '{name}.log'.format(name=self.name))
+        file_path = self._log_path.joinpath('{name}.log'.format(name=self.name))
         # 设置日志回滚, 保存在log目录, 一天保存一个文件, 保留15天
-        file_handler = TimedRotatingFileHandler(filename=file_name, when='D', interval=1, backupCount=15)
+        file_handler = TimedRotatingFileHandler(filename=str(file_path), when='D', interval=1, backupCount=15)
         file_handler.suffix = '%Y%m%d.log'
         if not level:
             file_handler.setLevel(self._level)
@@ -104,5 +104,5 @@ class LogHandler(logging.Logger):
 
 
 if __name__ == '__main__':
-    log = LogHandler()
+    log = LogHandler(log_path="test/1", file=True)
     log.info('test')

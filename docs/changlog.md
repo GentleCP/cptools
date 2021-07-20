@@ -1,4 +1,7 @@
 # ChangLog
+## v.1.47
+- `feat`: enable `LogHandler` for python2
+- `feat`: enable save log file in windows platform
 
 ## v.1.4.6
 - `fix`: fix error when import `DingDing` in notify, `EmailSender` will raise error.

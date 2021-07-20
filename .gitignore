@@ -69,5 +69,3 @@ venv.bak/
 *.un~
 
 *.ini
-*.egg-info/
-dist/
