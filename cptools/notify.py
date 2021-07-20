@@ -15,12 +15,15 @@ import os
 import requests
 from abc import abstractmethod, ABCMeta
 
-import yagmail
 import smtplib
-from dingtalkchatbot.chatbot import DingtalkChatbot
 
 class AuthError(Exception):
-    pass
+
+    def __init__(self, errmsg="认证失败"):
+        self.errmsg = errmsg
+
+    def __str__(self):
+        return self.errmsg
 
 def mac_notify(title,text):
     """
@@ -155,10 +158,13 @@ class DingDing(Notifier):
     """
 
     def __init__(self, token=None, *args, **kwargs):
+        from dingtalkchatbot.chatbot import DingtalkChatbot
         self._token = token
         if self._token:
             self.__webhook = "https://oapi.dingtalk.com/robot/send?access_token={}".format(self._token)
             self._dd = DingtalkChatbot(webhook=self.__webhook)
+        else:
+            raise AuthError("You have to provide the access token for Dingtalk.")
         super(DingDing, self).__init__(*args, **kwargs)
 
 
@@ -213,10 +219,14 @@ class EmailSender(Notifier):
         :param args:
         :param kwargs:
         '''
+        import yagmail
         self._user = user
         self._passwd_or_auth_code = password_or_auth_code
         self._host = host
-        self.__yag = yagmail.SMTP(user=self._user, password=self._passwd_or_auth_code, host=self._host)
+        try:
+            self.__yag = yagmail.SMTP(user=self._user, password=self._passwd_or_auth_code, host=self._host)
+        except NameError:
+            raise self.yagmail_not_found
         super(EmailSender, self).__init__(*args, **kwargs)
 
     def _check_configure(self):
@@ -239,3 +249,5 @@ class EmailSender(Notifier):
             return False
         else:
             return True
+
+

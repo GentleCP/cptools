@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: cptools
-Version: 1.4.4
+Version: 1.4.6
 Summary: Tools used by CP
 Home-page: https://github.com/GentleCP/cptools
 Author: GentleCP
@@ -72,10 +72,9 @@ Description: ![python version](https://img.shields.io/badge/python-3.5+-blue)
           SJ.send_text(text='This is a test.', desp='This is description.')
           ```
         - DingDing: notify everyone in your dingTalk group by [dingTalk_bot](https://developers.dingtalk.com/document/app/before-you-start)
-        > after `v.1.4.4`, cptools will not install `DingtalkChatbot` automatically, you have to install it by running `pip install DingtalkChatbot` manually
+        > after `v.1.4.5`, cptools will not install `DingtalkChatbot` automatically, you have to install it by running `pip install DingtalkChatbot` manually
         ```python
         from cptools.notify import DingDing
-        # from cptools import DingDing  both will work
         
         dd = DingDing()
         dd.token='your DingDing assess_token'  
@@ -89,7 +88,7 @@ Description: ![python version](https://img.shields.io/badge/python-3.5+-blue)
         - [x] 163 email
         - [x] qq email
         - [ ] others, haven't tested
-        > after `v.1.4.4`, cptools will not install `yagmail` automatically, you have to install it by running `pip install yagmail` manually
+        > after `v.1.4.5`, cptools will not install `yagmail` automatically, you have to install it by running `pip install yagmail` manually
         
         ```python
         from cptools.notify import EmailSender
@@ -103,7 +102,6 @@ Description: ![python version](https://img.shields.io/badge/python-3.5+-blue)
         
         ```python
         from cptools.notify import mac_notify
-        # from cptools import mac_notify  # both will work
         
         mac_notify(title='Warning', text='This is a test')
         ```

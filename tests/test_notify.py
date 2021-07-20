@@ -10,10 +10,10 @@
             Create Date: 2021/4/6 
 -----------------End-----------------------------
 """
-import pytest
+from unittest import TestCase, main
 from cptools.notify import ServerChan, DingDing, EmailSender
 
-class TestServerChan(object):
+class TestServerChan(TestCase):
     sc = ServerChan(token='')  # 请输入ServerChan的key进行测试
     def test_send_text(self):
         if self.sc.token.startswith('SCU'):
@@ -21,18 +21,18 @@ class TestServerChan(object):
         else:
             assert self.sc.send_text(title='hello world') == True
 
-class TestDingDing(object):
+class TestDingDing(TestCase):
     dd = DingDing(token='')  # 请输入DingDing的webhook assess_token进行测试
 
     def test_send_text(self):
         assert self.dd.send_text(text='【通知】hello world') == True
 
-class TestEmail(object):
+class TestEmail(TestCase):
     sender = EmailSender(user='', password_or_auth_code='', host='')
 
     def test_send_text(self):
-        assert self.sender.send_text(text='hello world', to=['574881148@qq.com']) == True
+        assert self.sender.send_text(text='hello world', to=['me@gentlecp.com']) == True
 
 
-# if __name__ =='__main__':
-#     pytest.main()
+if __name__ =='__main__':
+    main()

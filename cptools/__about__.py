@@ -10,7 +10,7 @@ Create Date: 2021/6/4
 -----------------End-----------------------------
 """
 __name__ = "cptools"
-__version__ = '1.4.4'
+__version__ = '1.4.6'
 __author__ = 'GentleCP'
 __author_email__ = 'me@gentlecp.com'
 __description__ = 'Tools used by CP'

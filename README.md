@@ -64,10 +64,9 @@ if download_file(download_url,file_path='360.exe', overwrite=True):
   SJ.send_text(text='This is a test.', desp='This is description.')
   ```
 - DingDing: notify everyone in your dingTalk group by [dingTalk_bot](https://developers.dingtalk.com/document/app/before-you-start)
-> after `v.1.4.4`, cptools will not install `DingtalkChatbot` automatically, you have to install it by running `pip install DingtalkChatbot` manually
+> after `v.1.4.5`, cptools will not install `DingtalkChatbot` automatically, you have to install it by running `pip install DingtalkChatbot` manually
 ```python
 from cptools.notify import DingDing
-# from cptools import DingDing  both will work
 
 dd = DingDing()
 dd.token='your DingDing assess_token'  
@@ -81,7 +80,7 @@ dd.send_text(text='[key word]This is a test.')  # your test should include the k
 - [x] 163 email
 - [x] qq email
 - [ ] others, haven't tested
-> after `v.1.4.4`, cptools will not install `yagmail` automatically, you have to install it by running `pip install yagmail` manually
+> after `v.1.4.5`, cptools will not install `yagmail` automatically, you have to install it by running `pip install yagmail` manually
 
 ```python
 from cptools.notify import EmailSender
@@ -95,7 +94,6 @@ email.send_text(text='test', contents='this is a test mail', to=['xx@qq.com',])
 
 ```python
 from cptools.notify import mac_notify
-# from cptools import mac_notify  # both will work
 
 mac_notify(title='Warning', text='This is a test')
 ```
