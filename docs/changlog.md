@@ -1,5 +1,5 @@
 # ChangLog
-## v.1.47
+## v.1.4.7
 - `feat`: enable `LogHandler` for python2
 - `feat`: enable save log file in windows platform
 

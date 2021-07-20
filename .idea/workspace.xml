@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65635fe1-fba5-49a4-aef4-f70be0a0efdb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cptools/__about__.py" beforeDir="false" afterPath="$PROJECT_DIR$/cptools/__about__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cptools/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/cptools/logger.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/changlog.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/changlog.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -297,6 +294,7 @@
       <workItem from="1625654460679" duration="644000" />
       <workItem from="1625748220523" duration="161000" />
       <workItem from="1625798980622" duration="2033000" />
+      <workItem from="1626784155957" duration="7000" />
     </task>
     <servers />
   </component>
