@@ -2,10 +2,14 @@ from setuptools import setup
 import setuptools
 from pathlib import Path
 
-about = {}
-root_path = Path(__file__).parent
-__about__ = root_path.joinpath('cptools/__about__.py').open('r', encoding='utf-8').read()
-exec(__about__, about)
+about = {
+    '__name__': "cptools",
+    '__version__': '2.0.0',
+    '__author__': 'GentleCP',
+    '__author_email__': 'me@gentlecp.com',
+    '__description__': 'Tools used by CP',
+    '__url__': 'https://github.com/GentleCP/cptools',
+}
 
 with open("README.md", 'r', encoding='utf8') as f:
     long_description = f.read()

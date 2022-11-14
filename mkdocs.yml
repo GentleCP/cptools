@@ -1,0 +1,18 @@
+site_name: cptools
+site_description: Tool code used by cp
+site_url: https://GentleCP.github.io/cptools/
+site_author: GentleCP
+repo_name: cptools
+repo_url: https://github.com/GentleCP/cptools
+
+theme:
+  name: "material"
+
+plugins:
+  - mkdocstrings
+
+nav:
+  - Home: index.md
+  - Tool functions: tool_function.md
+  - Logger: logger.md
+  - ChangeLog: change_log.md
